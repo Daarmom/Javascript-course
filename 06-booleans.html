@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Boolean
+    </title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <p>
+      
+    </p>
+    <script>
+
+      // console.log(3>5-5);
+      // console.log(5==='5.00');
+      // console.log(5!=='5.00');
+      // const age = 15;
+      // if (age>=16) {
+      //   console.log('You can drive!')
+      // }else if(age>=14){
+      //   console.log('Almost there!')
+      // }else{
+      //   console.log('You cannot drive')
+      // }
+      let cartValue = 5;
+      if (cartValue){
+        console.log('Truthy value')
+      }
+      if(!0){
+        console.log('true')
+      }
+      if(NaN){
+        console.log('Falsy value')
+      }
+      //Ternary operator
+      const result = 0?'truthy':'falsy';
+      console.log(result)
+      //Guard operator
+      const message = false && console.log('hello')
+      console.log(message)
+      //Or operator
+      const currency = undefined || console.log('USD')
+      console.log(currency)
+
+    </script>
+  </body>
+</html>

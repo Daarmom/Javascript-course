@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>
+            Variables
+        </title>
+        <style>
+            .add{
+              background-color: yellow;
+            }
+        </style> 
+    </head>
+
+    <body>
+        <p>Cart Quantity</p>
+        <p>
+          <button title="" class="show" onclick="
+            console.log('Cart Quantity: '+cartQuantity)
+            ">
+            Show Quantity
+          </button>
+          
+          
+          <button title="" class="add" onclick="
+          
+          if (cartQuantity<max) {
+            cartQuantity+=1;
+            console.log('Cart Quantity: '+cartQuantity);
+          } else {
+            alert('The cart is full!')
+          }
+          ">
+            Add to cart
+          </button>
+          
+          
+          <button title="" class="remove-from-cart" onclick="
+          
+          if (cartQuantity === min) {
+            alert('The cart is empty!')
+          } else {
+            cartQuantity-=1;
+            console.log('Cart Quantity: '+cartQuantity);
+          }
+
+          ">
+            Remove from cart
+          </button>
+          
+          
+          <button title="" class="add-two" onclick="
+          
+          if (cartQuantity + 2 > 10) {
+            alert('The cart is full');
+          } else {
+            cartQuantity = cartQuantity + 2;
+            console.log(`Cart quantity: ${cartQuantity}`);
+          }
+
+          ">
+            +2
+          </button>
+          
+          
+          <button title="" class="remove-two" onclick="
+
+          if (cartQuantity - 2 < min) {
+            alert('The cart is empty');
+          } else {
+            cartQuantity = cartQuantity - 2;
+            console.log(`Cart quantity: ${cartQuantity}`);
+          }
+
+          ">
+            -2
+          </button>
+          
+          
+          <button title="" class="add-three" onclick="
+          
+          if (cartQuantity + 3 > 10) {
+            alert('The cart is full');
+          } else {
+            cartQuantity = cartQuantity + 3;
+            console.log(`Cart quantity: ${cartQuantity}`);
+          }
+          
+          ">
+            +3
+          </button>
+          
+          
+          <button title="" class="remove-three" onclick="
+          
+          updateCartQuantity(-3)
+
+          ">
+            -3
+          </button>
+          
+          
+          <button title="" class="reset" onclick="
+          cartQuantity=0;
+          console.log('Cart is reset\nCart Quantity: '+cartQuantity)">
+            Reset cart
+          </button>
+
+        </p>
+        <script> 
+            const max = 10;
+            const min = 0;
+            let cartQuantity = 0;
+
+            function updateCartQuantity(change) {
+              if (cartQuantity + change > 10) {
+                alert('The cart is full');
+                return;
+              }
+
+              if (cartQuantity + change < 0) {
+                alert('Not enough items in the cart');
+                return;
+              }
+
+              cartQuantity += change;
+              console.log(`Cart quantity: ${cartQuantity}`);
+            }
+        </script>
+    </body>
+</html>   
+

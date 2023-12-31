@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock-Paper-Scissors
+    </title>
+    <link rel="stylesheet" href="styles/10-rock-paper-scissors.css">
+  </head>
+  <body>
+    <p class="title">
+      Rock Paper Scissors
+    </p>
+    <p>
+      <button onclick="
+      computerMove = generateComputerMove();
+      yourMove = 'Rock';
+      compareMoves (yourMove, computerMove);
+        " class="move-button">
+        <img src="images/rock-emoji.png" class="move-icon">
+      </button>
+
+      <button onclick="
+      computerMove = generateComputerMove();
+      yourMove = 'Paper';
+      compareMoves (yourMove, computerMove);
+      " class="move-button"> 
+        <img src="images/paper-emoji.png" class="move-icon">
+      </button>
+
+      <button onclick="
+      computerMove = generateComputerMove();
+      yourMove = 'Scissors';
+      compareMoves (yourMove, computerMove);
+      " class="move-button">
+        <img src="images/scissors-emoji.png" class="move-icon">
+      </button>
+
+    </p>
+    <p onclick="
+      showStatus(result);
+    " class="js-result result">
+    </p>
+    <p onclick="
+      showMoves(yourMove, computerMove);
+    " class="js-moves">
+    <img src="" class="move-icon">
+    <img src="" class="move-icon">
+    </p>
+    <p class="js-scorecard score">
+    </p>
+
+    <p>
+      <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreCard();
+      " class="reset-score-button">Reset Score</button>
+    </p>
+
+    <script src="scripts/10-rock-paper-scissors.js">
+
+    </script>
+  </body>
+</html>

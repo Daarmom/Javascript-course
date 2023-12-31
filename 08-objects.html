@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Objects
+    </title>
+  </head>
+  <body>
+    <script>
+      /*const product = {
+        name: 'socks',
+        price: 10.90
+      }
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+      product.name = 'cotton socks'
+      console.log(product);
+      
+      product.newProperty ='true';
+      console.log(product);
+      
+      delete product.newProperty;
+      console.log(product);
+      
+      delete product;
+      console.log(product);
+      */
+      
+      /*product2 = {
+        name: 'Shirt',
+        'delivery-time': '1 day',
+        //nested object
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        //functions are also values saved inside object
+        fun: function fun1(){
+          console.log('Function inside object')
+        }
+      }
+      console.log(product2);
+      product2['delivery-time'];
+      console.log(product2.name);
+      console.log(product2['name']);
+      // assumes '-' sign as minus sign..hence square bracket notation used
+      // console.log(product2.delivery-time);
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.count)
+      product2.fun()
+      console.log(typeof console)
+      console.log(typeof console.log)
+
+      const jsonObject = JSON.stringify(product2)
+      console.log(jsonObject)
+      const jsonString = JSON.parse(jsonObject)
+      console.log(jsonString)*/
+
+      console.log('hello'.length)
+      console.log('hello'.toUpperCase())
+      console.log(typeof(3.9.toString()))
+      console.log(typeof(true.toString()))
+
+      const object1 = {
+        message: 'Hello',
+        price: 799
+      }
+      const object2 = object1;
+      console.log(object1===object2);
+
+      const object3 = {
+        message: 'Hello',
+        price: 799
+      }
+      console.log(object1===object3);
+      console.log(object1.message===object3.message);
+
+      //Destructuring
+      const object4 = {
+        message: 'Hello',
+        price: 799
+      }
+      // const message = object4.message;
+      // const {message} = object4;
+      const {message, price} = object4;
+      console.log(message, price)
+
+      //Shorthand method
+      const object5 = {
+        message: 'message',
+        // method: function fun(){
+        //   console.log('Inside Method')
+        // }
+        method(){
+          console.log('Inside Method')
+        }
+      }
+      
+      console.log(object5.method());
+
+
+
+    </script>
+
+  </body>
+</html>
